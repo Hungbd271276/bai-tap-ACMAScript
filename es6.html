@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+ 
+  </style>
+</head>
+<body>
+    <script>
+        const months  = ['January' , 'Feruary', 'Matrch', 'April'];
+        let [jan , feb , mar , apr] = months;
+      for( let i = 0 ; i < [jan , feb , mar , apr].length ; i++){
+          console.log([jan , feb , mar , apr][i]);
+      }
+      let {firt_name, lastname} = {firt_name: 'green', lastname: 'blue'};
+      console.table(lastname);
+
+
+      let arr = [1,3,4,6,4,7,3,8];
+      // es5
+      arr.sort(function soft(a , b){
+           return a - b;
+      });
+      // es6
+      arr.sort((a , b) => {
+          return a - b;
+      });
+    </script>
+    <div id="content">
+      <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste cum quo quos ab commodi.</h5>
+      <h5> aperiam iste quis itaque dolorem reprehenderit pariatur quibusdam amet necessitatibus ea !</h5>
+      <input type="submit" id="name" value="chọn">
+    </div>
+    <script>
+        var cart1 = document.getElementById('name');
+        cart1.addEventListener('click', function(){
+     
+
+          var cart2 = document.getElementById('content')
+
+          // lấy thẻ cần innserBefore
+          var inserBeFo = document.getElementsByTagName('h5')[0];
+          
+          cart2.removeChild(inserBeFo);
+            
+        });
+
+    </script>
+
+    <form action="" method="post" id="myform">
+        <input type="button" onclick="submitForm()" value="Button"/>
+    </form>
+    <script>
+       function submitForm(){
+           document.getElementById('myform').submit();
+       }
+    </script>
+    <ul>
+        <li><a href="" class="rome">test 1</a></li>
+        <li><a href="" >test 2</a></li>
+        <li><a href="" class="rome">test 3</a></li>
+    </ul>
+  <script>
+      var show = document.getElementsByTagName('a');
+      // lặp mảng
+      for (var indext = 0; indext < show.length; indext++) {
+        show[indext].addEventListener('click', function(){
+            alert('đang học js nâng cao với ACMAScript');
+            return false;
+          });
+          
+      }
+  </script>
+<form name="http" method="post" action="#" onsubmit="validate()">
+  Username: <input type="text" value="" name="username" id="username"/> <br/>
+  Password: <input type="text" value="" name="password" id="password"/> <br/>
+  Re Password: <input type="text" value="" name="re-password" id="re-password"/> <br/>
+  <input type="submit" value="Register">        
+</form>
+<script>
+     function validate(){
+        var user = document.http.username;
+        var pass = document.http.password;
+        var checkpasst = document.http.re-password;
+         // check hihi
+
+       if(user.value == ""){
+         alert('Mời bạn nhập username');
+         user.style.outlineColor = "red";
+         user.focus();
+         return false;
+       }
+       if(pass.value == ""){
+        alert('Mời bạn nhập password');
+        pass.style.outlineColor = "red";
+        pass.focus();
+        return false;
+       }
+       if(pass.value != checkpasst.value){
+         alert('Mời bạn nhập lại passwd');
+         checkpasst.style.outlineColor = "red";
+         checkpasst.focus();
+         return false;
+       }
+       return true;
+     }
+</script>
+<br/>
+     	<div id="result"></div>
+      	<input type="button" value="Stop Random" id="stop_random" />
+        
+        <script>
+          	// Bước 1: Lấy các đối tượng
+          	var result = document.getElementById("result");
+          	var button = document.getElementById("stop_random");
+          	var html = document.getElementsByTagName("html")[0];
+          
+          	// Bước 2: Định nghĩa hành động hiển thị dãy số random
+          	function do_random()
+            {
+              	var randomString = Math.random();
+              	result.innerHTML = randomString;
+            }
+          	
+          	// Bước 3: Thêm hành động do_random cho sự kiện mousemove thẻ <html>, 
+            html.addEventListener("mousemove", do_random);
+          
+          	// Bước 4: Thêm sự kiện click cho button
+           	   button.addEventListener("click", function(){
+              	// Xóa hành động do_random khỏi sự kiện mousemove
+              	html.removeEventListener("mousemove", do_random);
+            });  
+        </script>
+
+        <script>
+          var aray = new Array(1,2,3)
+        console.log(aray.join());
+
+
+        var arrays = ['hung' , ...'đẹp', 'trai'];
+
+        arrays.push('vãi đãi');
+        console.table(arrays.join());
+
+       var arr1 = ['hung đẹp trai'];
+       var arr2 = ['dubaj'];
+       var concat = arr1.concat(arr2);
+
+       console.log(concat);
+        </script>
+</body>
+</html>

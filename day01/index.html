@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index1.js"></script>
+</head>
+<body>
+    <div id="content">
+     <h4>title</h4>
+    </div>
+    <div id="main"></div>
+    <script>
+        var $ = document.querySelector.bind(document);
+
+      /* var a =  $('#main').value = $('h4').innerHTML;
+     document.write(a); */
+     var title = $('h4').innerHTML;
+    $('#main').innerHTML = `<span>${title}</span>`;
+    </script>
+</body>
+</html>

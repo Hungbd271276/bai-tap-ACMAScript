@@ -1,0 +1,55 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML forms and JavaScript FormData</title>
+</head>
+<body>
+<form>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" ><br>
+
+    <label for="description">Short description</label>
+    <input type="text" id="description" name="description" ><br>
+
+    <label for="task">Task</label>
+    <textarea id="task" name="task" ></textarea><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+<script >
+    const form = document.forms[0];
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const formData = new FormData(this);
+
+  for (const formElement of formData) {
+    console.log(formElement);
+  }
+});
+</script>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+     <table>
+       <tbody id="product">
+
+       </tbody>
+     </table>
+       <form action="#" id="add-form">
+          <input type="text" name="hihi" placeholder="tên">
+          <button type="submit">Add</button>
+       </form>
+     <script src="main.js"></script>
+</body>
+</html>
